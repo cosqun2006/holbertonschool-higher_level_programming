@@ -2,7 +2,6 @@
 def no_c(my_string):
     new_string = ""
     for i in my_string:
-        if i!="C" and i=="c":
+        if i != 'c' and i != 'C':
             new_string += i
-        else:
     return new_string
