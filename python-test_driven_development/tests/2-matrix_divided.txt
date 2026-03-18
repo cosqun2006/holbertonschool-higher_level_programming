@@ -2,8 +2,7 @@
 The 2-matrix_divided module
 ===============================
 
-İdxal qaydası:
-    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Normal matrisin bölünməsi:
     >>> matrix = [[1, 2, 3], [4, 5, 6]]
@@ -38,20 +37,20 @@ XƏTA HALLARI (Edge Cases):
         ...
     TypeError: Each row of the matrix must have the same size
 
-4. Matris daxilində qeyri-rəqəm (məsələn string) varsa:
+4. Matris daxilində qeyri-rəqəm varsa:
     >>> matrix_divided([[1, "iki"], [3, 4]], 2)
     Traceback (most recent call last):
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-5. Matris siyahı deyilsə (məsələn tam ədəddirsə):
+5. Matris siyahı deyilsə:
     >>> matrix_divided(123, 2)
     Traceback (most recent call last):
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 6. Matrisin içindəki sətir siyahı deyilsə:
-    >>> matrix_divided([ [1, 2], 3 ], 2)
+    >>> matrix_divided([[1, 2], 3], 2)
     Traceback (most recent call last):
         ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
