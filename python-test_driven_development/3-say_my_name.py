@@ -1,16 +1,18 @@
 #!/usr/bin/python3
 """
-This module provides a function that prints a name.
+Bu modul say_my_name funksiyasını təqdim edir.
 """
 
 
 def say_my_name(first_name, last_name=""):
     """
-    Prints 'My name is <first name> <last name>'.
+    Ad və soyadı çap edən funksiya.
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
+
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
 
+    # Ən dəqiq format budur:
     print("My name is {} {}".format(first_name, last_name))
