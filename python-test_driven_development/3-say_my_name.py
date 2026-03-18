@@ -16,7 +16,7 @@ def say_my_name(first_name, last_name=""):
             TypeError: If first_name or last_name are not strings.
         """
     if isinstance(first_name, str):
-        raise TypeError("First name must be a string.")
+        raise TypeError("first name must be a string.")
     if isinstance(last_name, str):
-        raise TypeError("Last name must be a string.")
+        raise TypeError("last name must be a string.")
     print("My name is {} {}".format(first_name, last_name))
