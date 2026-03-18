@@ -1,0 +1,57 @@
+===============================
+The 2-matrix_divided module
+===============================
+
+İdxal qaydası:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Normal matrisin bölünməsi:
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Orijinal matrisin dəyişmədiyini yoxlayaq:
+    >>> matrix
+    [[1, 2, 3], [4, 5, 6]]
+
+Mənfi ədədlər və float bölən:
+    >>> matrix_divided([[10, 20], [30, 40]], 2.5)
+    [[4.0, 8.0], [12.0, 16.0]]
+
+XƏTA HALLARI (Edge Cases):
+
+1. div rəqəm deyilsə:
+    >>> matrix_divided([[1, 2], [3, 4]], "salam")
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+2. Sıfıra bölünmə halı:
+    >>> matrix_divided([[1, 2], [3, 4]], 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+3. Sətirlərin ölçüsü fərqlidirsə:
+    >>> matrix_divided([[1, 2, 3], [4, 5]], 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must have the same size
+
+4. Matris daxilində qeyri-rəqəm (məsələn string) varsa:
+    >>> matrix_divided([[1, "iki"], [3, 4]], 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+5. Matris siyahı deyilsə (məsələn tam ədəddirsə):
+    >>> matrix_divided(123, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+6. Matrisin içindəki sətir siyahı deyilsə:
+    >>> matrix_divided([ [1, 2], 3 ], 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
