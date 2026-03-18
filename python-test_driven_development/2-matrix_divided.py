@@ -3,6 +3,7 @@
 Bu modul matrixin bolunmesi funksiaysini temsil edir
 """
 
+
 def matrix_divided(matrix, div):
     """
         Matrisin bütün elementlərini verilmiş rəqəmə bölür.
@@ -30,4 +31,4 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    return [[round(element/div, 2) for element in row] for row in matrix]
+    return [[round(element / div, 2) for element in row] for row in matrix]
