@@ -1,20 +1,23 @@
 #!/usr/bin/python3
 """
-Bu modulda `add_integer` funksiyası yerləşir.
-Funksiya iki rəqəmi toplayır.
+This module provides a function that adds two integers.
+The function is named add_integer.
 """
 
 
 def add_integer(a, b=98):
     """
-    İki tam ədədi (və ya float) toplayan funksiya.
+    Adds 2 integers.
 
-    Arqumentlər:
-        a: birinci ədəd (int və ya float olmalıdır)
-        b: ikinci ədəd (int və ya float olmalıdır, default 98)
+    Args:
+        a: The first number, must be an int or float.
+        b: The second number, must be an int or float. Defaults to 98.
 
     Returns:
-        a + b-nin tam ədəd nəticəsi.
+        The sum of a and b as an integer.
+
+    Raises:
+        TypeError: If a or b are not integers or floats.
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
