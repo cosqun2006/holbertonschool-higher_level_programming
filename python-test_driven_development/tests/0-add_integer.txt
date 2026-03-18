@@ -31,3 +31,20 @@ Xəta halları (Error handling):
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+Sonsuzluq (Infinity) yoxlanışı:
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Və ya çox böyük float:
+    >>> add_integer(1e1000)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+NaN (Not a Number) yoxlanışı:
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
