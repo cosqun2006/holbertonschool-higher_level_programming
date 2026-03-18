@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 """
-Bu modul kvadrat klassını təyin edir
+Bu modul bos bir Square klassini teyin edir.
+Modul docstring mutleq olmalidir.
 """
+
 
 class Square:
     """
-    Bu klass kvadratı təmsil edir
+    Kvadrat klassi.
+    Klass docstring de mutleq olmalidir.
     """
     pass
