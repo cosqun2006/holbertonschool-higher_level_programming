@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
         div: The divisor (integer or float).
 
     Returns:
-        A new matrix with the result of the division, rounded to 2 decimal places.
+        A new matrix with the result of the division.
     """
     msg = "matrix must be a matrix (list of lists) of integers/floats"
 
