@@ -3,4 +3,9 @@
 
 
 class BaseGeometry:
+    """
+    Standart list sinfinə print_sorted metodunu əlavə edən sinif.
+    """
+
+
     pass
