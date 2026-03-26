@@ -1,17 +1,6 @@
 #!/usr/bin/python3
-"""
-Bu modul list-dən miras alan MyList sinfini təqdim edir.
-"""
-
-
 class MyList(list):
-    """
-    Standart list sinfinə print_sorted metodunu əlavə edən sinif.
-    """
-
+    """Inherits from list"""
     def print_sorted(self):
-        """
-        Siyahıdakı elementləri artan sıra ilə çap edir.
-        Orijinal siyahını dəyişmir.
-        """
+        """Prints the list in ascending order"""
         print(sorted(self))
