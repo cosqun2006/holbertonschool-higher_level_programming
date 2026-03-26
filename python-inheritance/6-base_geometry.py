@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+"""BaseGeometry modulu üçün sənədləşdirmə"""
+
+
+class BaseGeometry:
+    """Boş bir BaseGeometry sinfi"""
+
+    def area(self):
+        """hgwdweafsdykewj,hgryskfgevgbsfhgrkhc"""
+        raise Exception("area() is not implemented")
