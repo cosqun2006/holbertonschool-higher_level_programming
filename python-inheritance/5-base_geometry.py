@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-"""Miras alma yoxlanılması modulu"""
+"""BaseGeometry modulu üçün sənədləşdirmə"""
 
 
 class BaseGeometry:
-    """
-    Standart list sinfinə print_sorted metodunu əlavə edən sinif.
-    """
-
-
+    """Boş bir BaseGeometry sinfi"""
     pass
