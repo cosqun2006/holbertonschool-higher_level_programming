@@ -1,0 +1,35 @@
+===============================
+How to use MyList class
+===============================
+
+First, import the class:
+    >>> MyList = __import__('1-my_list').MyList
+
+Create an instance:
+    >>> my_list = MyList()
+
+Add some elements:
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+
+Check the current list:
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Print the sorted version:
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Verify that the original list is unchanged:
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Check with a different set of numbers:
+    >>> my_list = MyList([10, -5, 0])
+    >>> my_list.print_sorted()
+    [-5, 0, 10]
+    >>> print(my_list)
+    [10, -5, 0]
