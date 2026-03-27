@@ -5,5 +5,5 @@ Module for Mixins and Dragon class
 
 
 def read_file(filename=""):
-    with open(filename, "r") as file:
-        print(file.read())
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
