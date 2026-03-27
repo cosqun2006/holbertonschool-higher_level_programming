@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-This module contains the function write_file
+Bu modul faylın sonuna mətn əlavə edən funksiyanı ehtiva edir
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
-    jnhbgvfdghmj dhgahSH Dcbvgsaj dhchbvscgfnvsd
+    Mətni UTF8 formatında faylın sonuna əlavə edir və simvol sayını qaytarır
     """
     with open(filename, mode="a", encoding="utf-8") as f:
         return f.write(text)
