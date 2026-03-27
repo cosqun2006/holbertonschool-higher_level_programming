@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """
-Module for Mixins and Dragon class
+This module contains the function read_file
 """
 
 
 def read_file(filename=""):
+    """
+    Reads a text file (UTF8) and prints it to stdout
+    """
     with open(filename, encoding="utf-8") as f:
         print(f.read(), end="")
