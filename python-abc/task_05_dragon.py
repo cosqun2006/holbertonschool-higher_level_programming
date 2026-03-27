@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Module for Mixins and Dragon class
+"""
+
 
 class SwimMixin:
     def swim(self):
@@ -12,4 +16,4 @@ class FlyMixin:
 
 class Dragon(SwimMixin, FlyMixin):
     def roar(self):
-        print("The roar roars!")
+        print("The dragon roars!")
