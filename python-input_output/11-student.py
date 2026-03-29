@@ -27,6 +27,7 @@ class Student:
                 if acat in self.__dict__:
                     yeni_luget[acat] = self.__dict__[acat]
             return yeni_luget
+        return self.__dict__
 
     def reload_from_json(self, json):
         """Lüğətdəki məlumatlarla obyektin bütün atributlarını yeniləyir."""
