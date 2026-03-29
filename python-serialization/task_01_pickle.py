@@ -1,8 +1,4 @@
-#!/usr/bin/python3
-"""
-Bu modul Python lüğətini (dictionary) JSON faylına
-seriallaşdırmaq və yenidən geri oxumaq üçün funksiyaları ehtiva edir.
-"""
+#!/usr/bin/env python3
 import pickle
 
 
@@ -19,15 +15,15 @@ class CustomObject:
 
     def serialize(self, filename):
         try:
-            with open(filename, "wb") as file:
-                pickle.dump(self, file)
+            with open(filename, "wb") as f:
+                pickle.dump(self, f)
         except Exception:
             return None
 
-        @classmethod
-        def deserialize(cls, filename):
-            try:
-                with open(filename, "rb") as file:
-                    return pickle.load(file)
-            except Exception:
-                return None
+    @classmethod
+    def deserialize(cls, filename):
+        try:
+            with open(filename, "rb") as f:
+                return pickle.load(f)
+        except Exception:
+            return None
