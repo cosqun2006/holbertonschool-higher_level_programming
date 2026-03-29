@@ -4,6 +4,13 @@ import xml.etree.ElementTree as ET
 
 
 def serialize_to_xml(dictionary, filename):
+    """
+    Python lüğətini XML faylına yazır.
+
+    Parametrlər:
+    - dictionary: Python lüğəti
+    - filename: XML fayl adı
+    """
     root = ET.Element('data')
     for key, value in dictionary.items():
         child = ET.SubElement(root, key)
