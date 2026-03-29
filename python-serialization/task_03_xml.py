@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import xml.etree.ElementTree as ET
 
 
@@ -11,7 +9,9 @@ def serialize_to_xml(dictionary, filename):
     - dictionary: Python lüğəti
     - filename: XML fayl adı
     """
-    root = ET.Element('data')
+
+    root = ET.Element("data")
+
     for key, value in dictionary.items():
         child = ET.SubElement(root, key)
         child.text = str(value)
