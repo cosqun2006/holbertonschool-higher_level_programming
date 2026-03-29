@@ -29,5 +29,6 @@ class Student:
             return yeni_luget
 
     def reload_from_json(self, json):
+        """Lüğətdəki məlumatlarla obyektin bütün atributlarını yeniləyir."""
         for key, value in json.items():
             setattr(self, key, value)
