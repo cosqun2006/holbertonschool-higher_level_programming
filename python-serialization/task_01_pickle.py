@@ -27,3 +27,8 @@ class CustomObject:
                 return pickle.load(f)
         except Exception:
             return None
+#Faylı açarkən və ya pickle ilə oxuyarkən səhvlər ola bilər:
+#Fayl mövcud olmaya bilər
+#ayl pozula bilər (malformed)
+#Fayl başqa formatda ola bilər
+#try-except bu səhvləri tutmaq və proqramın qırılmasının qarşısını almaq üçündür.
