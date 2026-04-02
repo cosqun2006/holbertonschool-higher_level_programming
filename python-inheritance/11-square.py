@@ -22,5 +22,5 @@ class Square(Rectangle):
         return self.__size ** 2
 
     def str(self):
-        """gfdfghjkldfsghkjl"""
+        """Kvadratın [Square] <width>/<height> formatında təsvirini qaytarır."""
         return "[Square] {}/{}".format(self.__size, self.__size)
