@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """Defines a Square class that inherits from Rectangle."""
-from wcwidth import width
 
 Rectangle = __import__('9-rectangle').Rectangle
 
@@ -21,6 +20,7 @@ class Square(Rectangle):
     def area(self):
         """Return the area of the square."""
         return self.__size ** 2
+
     def str(self):
         """gfdfghjkldfsghkjl"""
         return "[Square] {}/{}".format(self.__size, self.__size)
