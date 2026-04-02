@@ -1,26 +1,27 @@
 #!/usr/bin/python3
-"""Defines a Square class that inherits from Rectangle."""
-
+"""Square modul sənədləşməsi."""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """Represent a square using Rectangle."""
+    """Square sinif sənədləşməsi."""
 
     def __init__(self, size):
-        """Initialize a new square.
-
+        """İnisializasiya metodu.
         Args:
-            size (int): The size of the new square.
+            size (int): Kvadratın tərəfi.
         """
+        # Əvvəlcə validasiya edirik
         self.integer_validator("size", size)
+        # Valideyn sinfin (Rectangle) init-ni çağırırıq
         super().__init__(size, size)
+        # Şəxsi (private) atributu saxlayırıq
         self.__size = size
 
     def area(self):
-        """Return the area of the square."""
+        """Sahəni hesablayan metod."""
         return self.__size ** 2
 
-    def str(self):
-        """Kvadratın [Square] <width>/<height> formatında təsvirini qaytarır."""
+    def __str__(self):
+        """Kvadratın string təmsili."""
         return "[Square] {}/{}".format(self.__size, self.__size)
