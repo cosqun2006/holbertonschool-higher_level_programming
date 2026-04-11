@@ -3,6 +3,7 @@
 import MySQLdb
 import sys
 
+
 if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost",
@@ -20,6 +21,6 @@ if __name__ == "__main__":
         (sys.argv[4],)
     )
     rows = cursor.fetchall()
-    print(", ".join(rows[0] for row in rows))
+    print(", ".join(row[0] for row in rows))
     cursor.close()
     db.close()
