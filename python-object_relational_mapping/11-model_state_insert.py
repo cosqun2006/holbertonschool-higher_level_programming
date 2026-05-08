@@ -8,20 +8,22 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
-    user = sys.argv[1]
-    passwd = sys.argv[2]
-    db = sys.argv[3]
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        user, passwd, db), pool_pre_ping=True)
+    # Engine yaradılır
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+        sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
 
+    # Sessiya yaradılır
     Session = sessionmaker(bind=engine)
     session = Session()
 
+    # Yeni obyekt yaradılır - YAZILIŞA DİQQƏT: Louisiana
     new_state = State(name="Louisiana")
 
+    # Bazaya əlavə edilir
     session.add(new_state)
     session.commit()
 
+    # YALNIZ yeni yaranan ID-ni çap edirik
     print(new_state.id)
 
     session.close()
