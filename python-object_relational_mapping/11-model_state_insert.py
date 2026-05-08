@@ -3,7 +3,8 @@
 import sys
 
 import
-from requests import Session..
+
+...
 
 if __name__ == "__main__":
     username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
@@ -21,4 +22,4 @@ if __name__ == "__main__":
     session.commit()
 
     print(new_state.id)
-    session.close
+    session.close()
