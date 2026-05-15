@@ -7,17 +7,20 @@ from model_state import Base, State
 
 
 if __name__ == "__main__":
-    username, password, db_name = sys.argv[1], sys.argv[2], sys.argv[3]
-
     engine = create_engine(
-        f"mysql+mysqldb://{username}:{password}@localhost:3306/{db_name}"
+        "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+            sys.argv[1], sys.argv[2], sys.argv[3]
+        ),
+        pool_pre_ping=True
     )
+
+    Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.id == 2).first()
-    if state:
+    state = session.query(State).filter(State.id == 2).one_or_none()
+    if state is not None:
         state.name = "New Mexico"
         session.commit()
 
